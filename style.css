@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Fugaz+One&family=Palanquin+Dark&display=swap');
+
+:root {
+    --dblue: rgb(0, 0, 100);
+    --lblue: #0088ff;
+}
+*::-webkit-scrollbar
+{
+    display: none;
+}
+*
+{
+    font-family: 'Palanquin Dark', sans-serif;
+    user-select: none;
+    scroll-behavior: smooth;
+    transition: all .2s;
+}
+
+body
+{
+    margin: 0px;
+}
+html
+{
+    scroll-snap-type: y mandatory ;
+}
+section
+{
+    display: grid;
+    justify-content: center;
+    height: 100vh;
+    scroll-snap-align: center;
+}
+header
+{
+    color: var(--dblue);
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.712);
+}
+header p
+{
+    margin-left: 50px;
+}
+.navlist
+{
+    padding: 0px 50px;
+    align-items: center;
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+.navitem
+{
+    text-decoration-color: rgba(255, 255, 255, 0);
+    text-decoration-line:underline;
+    text-underline-offset: 3px;
+}
+.navitem:hover
+{
+    text-decoration-line:underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--lblue);
+}
+a
+{
+    text-decoration-line: none;
+    color: var(--dblue);
+}
+#home
+{
+    color: var(--dblue);
+    padding: 10px;
+    background-color: white;
+    display: grid;
+    justify-content:space-evenly;
+    grid-template-areas:
+    "text text photo photo"
+    "social social social social"
+    ;
+}
+.text
+{
+    margin-top: 100px;
+    font-weight: 600;
+    font-size: 45px;
+    grid-area: text;
+}
+.photo
+{
+    margin-top: 100px;
+    grid-area: photo;
+}
+.social
+{
+    grid-area: social;
+}
+
+.name
+{
+    color: var(--lblue);
+}
+.dpbox
+{
+    border-radius: 80% 60%;
+    overflow: hidden;
+    height: 500PX;
+    width: 430px;
+}
+.dpbox2
+{
+    border-radius: 80% 60%;
+    transition: all 1s;
+    position: relative;
+    top: 50px;
+    background-image: linear-gradient(var(--lblue), rgba(0, 153, 255, 0.762));
+    height: 450px;
+    width: 430px;
+}
+.dpbox:hover img
+{
+
+    position: relative;
+    top: -50px;
+    filter: drop-shadow(10px 10px 12px rgba(0, 0, 0, 0.549));
+}
+.dpbox2 img
+{
+    height: 180%;
+    position: relative;
+    top: -40px;
+    left: -80px;
+}
+.social
+{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 100px;
+}
+
+.social svg
+{
+    height: 30px;
+    fill: var(--dblue);
+}
+.social svg:hover
+{
+    margin-bottom: 5px;
+    fill: var(--lblue);
+}
+.btn
+{
+    width: 150px;
+    position: relative;
+    top: -50px;
+    background-color: var(--lblue);
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    padding:0px 15px;
+}
+.btn:hover
+{
+    filter: drop-shadow(-2px 3px  var(--dblue));
+}
+.btn:active
+{
+    margin-left: -2px;
+    margin-top: 3px;
+    background-color: var(--dblue);
+    filter: none;
+}
+.heading
+{
+    margin-top: 60px;
+    color: var(--dblue);
+    padding-top: 15px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 900;
+    text-decoration-line:underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--dblue);
+}
+.box
+{
+    width: 80%;
+    border-radius: 20px;
+    margin-top: -50px ;
+    background-color: var(--dblue);
+    height: 65vh;
+    justify-self: center;
+}
+#about .box
+{
+    padding:20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.myimg
+{
+    border-radius: 10px;
+    height: 100%;
+
+}
+#skills .box
+{
+    gap: 10px;
+    padding: 0px 20px;
+    align-items: center;
+    display:grid ;
+    grid-template-areas : 
+    "skilhead skilhead skillimg"
+    "skilltxt skilltxt skillimg"
+    "graph graph  skillimg" ;  
+}
+footer
+{
+
+    scroll-snap-align: start;
+    display: grid;
+    justify-self: end;
+    margin-bottom: 0px;
+    background-color: var(--dblue);
+}
+footer p
+{
+    line-height: 50px;
+    color: white;
+    text-align: center;
+}
+.skillimg
+{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+    grid-area: skillimg;
+}
+.aboutme
+{
+    font-size: 1.5vw;
+    color: rgba(255, 255, 255, 0.777);
+}
+.myname
+{
+    color: white;
+    font-size: 3vw;
+}
+.skilhead
+{
+    margin-top: -2px;
+    margin-bottom: -10px;
+    padding: 0px;
+    color: white;
+    grid-area: skilhead;
+    font-size: 3vw;
+}
+.skilltxt
+{
+    margin-top: -10px;
+    font-size: 3vw;
+    grid-area: skilltxt;
+    color: rgb(202, 202, 202);
+    font-size: 12px ;
+}
+
+.graph
+{
+    color: white;
+    grid-area: graph;
+}
+    
+progress
+{
+    width: 100%;
+    accent-color: var(--lblue);
+}
+form label
+{
+    color: white;
+}
+form
+{
+    gap: 20px;
+    margin: 0px auto;
+    display: grid;
+}
+#btn
+{
+    background-color: var(--lblue);
+    color: white;
+    font-size: 20px;
+}
+#btn:hover
+{
+    background-color:rgb(0, 106, 255);
+}
+#btn:active
+{
+    background-color: var(--dblue);
+}
+#msg
+{
+    height: 100px;
+    text-align: start;
+    text-wrap: nowrap;
+}
+#btns
+{
+    gap: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#contact .box
+{
+    padding:  20px;
+
+}
+input
+{
+    font-size: 25px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.menu
+{
+    display: none;
+}
+#work .box
+{
+    width: 100%;
+    padding: 20px;
+    height: 420px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;   
+}
+#work .box img
+{
+    height: 200px;
+    border-radius: 10px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+#work .box img:hover
+{
+    aspect-ratio: 1.2;
+}
+#contact > .box
+    {
+        height: fit-content;
+    }
+@media screen and (max-width: 770px)
+{
+    .menu
+    {
+        position: fixed;
+        cursor: pointer;
+        display: block;
+        fill: var(--dblue);
+        align-self: center;
+        justify-self: end;
+        margin-right: 20px;
+    }
+    header
+    {
+        display: flex;
+        justify-content: end;
+        height: 50px;
+    }
+    header p
+    {   
+        font-size: 20px;
+        align-self: center;
+        margin: auto;
+    }
+    .navlist
+    {
+        width: 80px;
+        gap: 15px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 50px;
+        right: 30px;
+        overflow: hidden;
+        background-color: rgba(167, 224, 255, 0.792);
+        padding: 20px;
+        height: fit-content;
+    }
+    .navitem:hover
+    {
+        margin-left: -15px;
+    }
+    .myname
+    {
+        font-size: 1.5rem;
+    }
+    #home
+    {
+        padding: 10px;
+        background-color: white;
+        display: grid;
+        justify-content:space-evenly;
+        grid-template-areas:
+        "text"
+        "photo"
+        "social"
+        ;
+    }
+    .dpbox
+    {
+        display: none;
+        
+    }
+    .dpbox2
+    {
+        display: none;
+    }
+    .social
+    {
+        margin-top: -20px;
+        display: flex;
+        justify-content: center;
+    }
+    .text
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .myimg
+    {
+        aspect-ratio: 2/4;
+        object-fit: cover;
+    }
+    .aboutme
+    {
+        font-size: 3vw;
+    }
+    .skilhead
+    {
+        font-size: 1.2rem;
+    }
+    .skillimg
+    {
+        height: 14rem;
+    }
+    .skilltxt
+    {
+        max-height: 15rem;
+        overflow: hidden;
+    }
+    #skills .box
+    {
+        padding:15px;
+        align-items: start;
+        display: grid;
+        grid-template-areas : 
+        "skilhead skillimg"
+        "skilltxt skillimg"
+        "graph graph";
+    }
+    svg
+    {
+        height: 25px;
+        width: 25px;
+    }
+    #work .box
+{
+    width: fit-content;
+    padding: 20px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;   
+}
+#work .box img
+{
+    height: 150px;
+    border-radius: 10px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+#work .box img:hover
+{
+    aspect-ratio: 1;
+}
+}
+.top
+{
+    opacity: 40%;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    text-align: center;
+    padding: 2px;
+    padding-bottom: 5px;
+    transform: rotate(-90deg);
+    line-height: 18px;
+    border-radius: 5px;
+    height: 20px;
+    width: 20px;
+    background-color: var(--lblue);
+    color: white;
+}
+.top:hover
+{
+    opacity: 9;
+}
+.graph svg
+{
+    fill: white;
+    height: 30px;
+}
+.graph label
+{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
